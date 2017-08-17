@@ -1,0 +1,21 @@
+{
+  "name": "webpack3",
+  "version": "1.0.0",
+  "description": "这是webpack3的学习项目用来做自己的博客",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "keywords": [
+    "webpack3",
+    "react"
+  ],
+  "author": "AimeeLi",
+  "license": "ISC",
+  "devDependencies": {
+    "open-browser-webpack-plugin": "^0.0.5",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
