@@ -12,11 +12,11 @@
     hot: true,
     inline: false,
     contentBase: './src',
-    port: 3000
+    port: 3033
   },
   // 配置入口文件
   entry: [
-    
+
      path.resolve(__dirname, 'src/index.js')
    ],
   // 配置打包输出
@@ -58,6 +58,6 @@
   plugins: [
 
     new webpack.HotModuleReplacementPlugin(),
-    new OpenBrowserPlugin({url: 'http://localhost:3000'})
+    new OpenBrowserPlugin({url: 'http://localhost:3033'})
   ]
  }
