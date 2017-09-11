@@ -10,7 +10,7 @@
    devServer: {
      historyApiFallback: true,
     hot: true,
-    inline: false,
+    inline: true,
     contentBase: './src',
     port: 3033
   },
@@ -25,36 +25,40 @@
     publicPath: '/',
     filename: './bundle.js'
   },
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /\.css$/,
-  //       // include: path.resolve(__dirname, 'src'), // 只包含src这个文件夹下的css
-  //       loader: 'style!css'
-  //     },
-  //     {
-  //             test: /\.less/,
-  //             loader: 'style-loader!css-loader!less-loader?outputStyle=expanded'
-  //     },
-  //     {
-  //       test: /\.js[x]?$/,
-  //       include: path.resolve(__dirname, 'src'),
-  //       exclude: /(node_modules|bower_components)/,
-  //       loader: 'babel-loader',
-  //       loaders: [
-  //             'react-hot',
-  //             'babel?presets[]=react,presets[]=es2015,presets[]=stage-0'
-  //           ],
-  //       query: {
-  //                   "plugins": ['transform-decorators-legacy']
-  //               }
-  //     }
-  //   ]
-  //
-  // },
-  resolve: {
-    extensions: ['*','.js', '.jsx']
-  },
+  module: {
+      loaders: [
+        {
+          test: /\.css$/,
+          // include: path.resolve(__dirname, 'src'), // 只包含src这个文件夹下的css
+          loader: "style-loader!css-loader"
+        },
+        {
+          test: /\.scss/,
+          loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
+        },
+        {
+          test: /\.(js|jsx)$/,
+              include: [
+                path.resolve(__dirname, 'src')
+                // path.resolve(__dirname, 'node_modules/jqwidgets-framework')
+              ],
+              exclude: /node_modules/,
+
+              use: [{
+                  loader: 'babel-loader',
+                  query: {
+                      cacheDirectory: true,
+
+                  }
+              }]
+        }
+      ]
+
+    },
+    resolve: {
+      extensions: ['*','.js', '.jsx','json'],
+
+    },
   plugins: [
 
     new webpack.HotModuleReplacementPlugin(),
