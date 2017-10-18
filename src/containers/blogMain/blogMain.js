@@ -4,14 +4,16 @@
 *@time 2017-09-09
 **/
 import React, { Component } from 'react';
-import BlogHeader from './mainHeader';
+import MainLogo from './MainLogo';
+import BlogMajor from './BlogMajor';
 import './main.scss'
 
 class BlogMain extends Component {
   render() {
     return(
-      <div>
-        <BlogHeader/>
+      <div className="blog-wrap">
+        <MainLogo/>
+        <BlogMajor />
       </div>
     )
   }
