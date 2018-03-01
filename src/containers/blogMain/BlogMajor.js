@@ -17,7 +17,7 @@ export default class BlogMajor extends Component {
         <MajorList />
         <MajorList />
         <MajorList />
-        <Pagination showQuickJumper defaultCurrent={2} total={500}  />
+        <Pagination showQuickJumper defaultCurrent={1} total={500}  />
       </div>
     )
   }
