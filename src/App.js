@@ -6,6 +6,7 @@
 
 import React, { Component } from 'react';
 import './containers/assets/resect.scss';
+import 'antd/dist/antd.css'; 
 import BlogMain from './containers/blogMain/BlogMain'
 
 export default class App extends Component {

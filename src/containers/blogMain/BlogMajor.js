@@ -5,6 +5,7 @@
 **/
 
 import React, { Component } from 'react';
+import { Pagination } from 'antd'
 import MajorList from './MajorList';
 export default class BlogMajor extends Component {
   render() {
@@ -16,6 +17,7 @@ export default class BlogMajor extends Component {
         <MajorList />
         <MajorList />
         <MajorList />
+        <Pagination showQuickJumper defaultCurrent={2} total={500}  />
       </div>
     )
   }

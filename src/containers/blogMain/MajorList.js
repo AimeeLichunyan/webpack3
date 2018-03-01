@@ -5,11 +5,12 @@
 **/
 
 import React, { Component } from 'react';
+import 'animate.css';
 
 export default class MajorList extends Component {
   render() {
     return(
-      <div className="BlogMajor-wrap">
+      <div className="BlogMajor-wrap ">
         <article>
           <section>
             <header>

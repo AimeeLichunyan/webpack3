@@ -18,6 +18,17 @@ body {
     background-color: #ff8eff;
     position: relative;
   }
+  .blog-intr {
+    margin-top: 100px;
+    text-align-last: center;
+    .blog-go {
+      cursor: pointer;
+      line-height: 30px;
+    }
+    .blog-go:hover{
+      color: #ccc;
+    }
+  }
   .logo-img {
     height: 180px;
     width: 180px;

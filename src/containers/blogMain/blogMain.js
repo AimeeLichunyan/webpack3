@@ -6,7 +6,8 @@
 import React, { Component } from 'react';
 import MainLogo from './MainLogo';
 import BlogMajor from './BlogMajor';
-import './main.scss'
+import './main.scss';
+import Zmage from 'react-zmage';
 
 class BlogMain extends Component {
   render() {
@@ -14,6 +15,7 @@ class BlogMain extends Component {
       <div className="blog-wrap">
         <MainLogo/>
         <BlogMajor />
+
       </div>
     )
   }
