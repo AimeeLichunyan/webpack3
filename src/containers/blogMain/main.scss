@@ -1,0 +1,99 @@
+// Blog左侧样式
+body {
+  // width: 100%;
+  height: 100%;
+  background-color: #D9E4EA;
+}
+.blog-wrap {
+  // position: relative;
+  overflow: hidden;
+}
+.logo-main {
+  width: 300px;
+  background-color:cyan;
+  height: 100%;
+  position: fixed;
+  .logo-header {
+    height: 180px;
+    background-color: #ff8eff;
+    position: relative;
+  }
+  .blog-intr {
+    margin-top: 100px;
+    text-align-last: center;
+    .blog-go {
+      cursor: pointer;
+      line-height: 30px;
+    }
+    .blog-go:hover{
+      color: #ccc;
+    }
+  }
+  .logo-img {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    position: absolute;
+    top: 90px;
+    left: 60px;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      -webkit-animation-duration: 0.4s;
+      -webkit-animation-delay: 0.3s;
+    }
+  }
+}
+
+
+// 博客的主要部分
+.blog-major {
+  position: absolute;
+  left: 320px;
+  // width: 100%;
+  min-height: 100%;
+
+
+}
+.BlogMajor-wrap {
+  margin-top: 20px;
+  width: 75%;
+  background-color: #fff;
+  article {
+    box-shadow: 3px 2px 8px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 3px 2px 8px rgba(0,0,0,0.5);
+    -m-box-shadow: 3px 2px 8px rgba(0,0,0,0.5);
+    -o-box-shadow: 3px 2px 8px rgba(0,0,0,0.5);
+    header {
+      padding: 15px 8.2em 15px 25px;
+      border-left:6px solid  #a3bee1;
+      color: #5b5b5b;
+    }
+    header:hover {
+      color: #8e8e8e;
+      border-left:5px solid  #02df82;
+    }
+    .article-main {
+      padding: 0 2em;
+      font-size: 1rem;
+      line-height: 1.65rem;
+    }
+    .article-label {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin: 10px 30px 0 30px;
+      border-top: 1px solid #ddd;
+    }
+    .article-all {
+      float: right;
+      background-color: #888cba;
+      color:#fff;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
+}
