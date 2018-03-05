@@ -14,12 +14,16 @@ import BlogActiveMain from './containers/blogAcitve/BlogActiveMain'
 
 const routers = [
   {
+    path: '/',
+    exact: true,
+    main: () => <div> <BlogMain /></div>
+  },
+  {
     path: '/home',
     exact: true,
     main: () => <div> <BlogMain /></div>
   },{
     path: '/BlogActiveMain',
-    exact: false,
     main: () => <div><BlogActiveMain /></div>
   }
 ]
@@ -49,6 +53,7 @@ const App = () => (
           <Route
           key={index}
           path={route.path}
+          exact={route.exact}
           component={route.main}
           >
           </Route>
