@@ -20,9 +20,10 @@ export default class MainLogo extends Component {
         <div className="blog-intr">
           <h2>我的博客</h2>
           <ul>
-            <li className="blog-go">首页</li>
-            <li className="blog-go">所有文章</li>
+            <li className="blog-go"><Link to={'/home'}>首页</Link></li>
+            <li className="blog-go"><Link to={'/BlogActiveMain'}>所有文章</Link></li>
             <li className="blog-go">书单</li>
+            <li className="blog-go">关于我</li>
           </ul>
         </div>
 

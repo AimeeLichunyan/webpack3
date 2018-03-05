@@ -4,21 +4,19 @@
 *@time 2017-09-09
 **/
 import React, { Component } from 'react';
-import MainLogo from './MainLogo';
-import BlogMajor from './BlogMajor';
-import './main.scss';
+// import MainLogo from './MainLogo';
+// import BlogMajor from './BlogMajor';
+// import './main.scss';
 import Zmage from 'react-zmage';
 
-class BlogMain extends Component {
+class BlogActiveMain extends Component {
   render() {
     return(
       <div className="blog-wrap">
-        
-        <BlogMajor />
-
+       哈哈
       </div>
     )
   }
 }
 
-export default BlogMain
+export default BlogActiveMain
