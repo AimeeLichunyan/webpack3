@@ -54,7 +54,8 @@ const App = () => (
           exact={route.exact}
           component={route.main}
           >
-          </Route>
+          </Route>,
+          <Route path="/topics" component={Topics} />
         ))
       }
     </div>

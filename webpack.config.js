@@ -3,8 +3,9 @@
  **/
 
  const webpack = require('webpack');
- const path = require("path")
- const OpenBrowserPlugin = require('open-browser-webpack-plugin')
+ const path = require("path");
+//  const ExtracTextPlugin = require('extract-text-webpack-plugin');
+ const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
  module.exports = {
    devServer: {
@@ -14,16 +15,19 @@
     contentBase: './src',
     port: 3033
   },
+  devtool: 'source-map',
   // 配置入口文件
-  entry: [
+  entry: {
 
-     path.resolve(__dirname, 'src/index.js')
-   ],
+     'index': path.resolve(__dirname, 'src/index.js'),
+     vendor: ['react', 'react-dom','react-router-dom']
+    },
   // 配置打包输出
   output: {
-    path: path.resolve(__dirname, 'build'),
-    publicPath: '/',
-    filename: './bundle.js'
+    path: path.resolve(__dirname, './dist'),  
+    // publicPath: '/', 
+    filename: '[name].js',
+    // chunkFilename: './bundle.chunck.js'
   },
   module: {
       loaders: [
@@ -31,10 +35,15 @@
           test: /\.css$/,
           // include: path.resolve(__dirname, 'src'), // 只包含src这个文件夹下的css
           loader: "style-loader!css-loader"
+          // loader: ExtracTextPlugin.extract({fallback: 'style-loader', use: 'css-loader'})
         },
         {
           test: /\.scss/,
           loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
+        },
+        {
+          test: /\.less/,
+          loader: 'style-loader!css-loader!less-loader?outputStyle=expanded'
         },
         {
           test: /\.(js|jsx)$/,
