@@ -9,14 +9,14 @@ import React, { Component } from 'react';
 // import './main.scss';
 import Zmage from 'react-zmage';
 
-class BlogActiveMain extends Component {
+class AboutMe extends Component {
   render() {
     return(
       <div className="blog-wrap">
-       哈哈
+       关于我
       </div>
     )
   }
 }
 
-export default BlogActiveMain
+export default AboutMe

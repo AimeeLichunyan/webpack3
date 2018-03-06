@@ -9,14 +9,14 @@ import React, { Component } from 'react';
 // import './main.scss';
 import Zmage from 'react-zmage';
 
-class BlogActiveMain extends Component {
+class BookListMain extends Component {
   render() {
     return(
       <div className="blog-wrap">
-       哈哈
+       书单列表
       </div>
     )
   }
 }
 
-export default BlogActiveMain
+export default BookListMain

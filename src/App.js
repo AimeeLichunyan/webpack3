@@ -10,7 +10,9 @@ import 'antd/dist/antd.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import MainLogo from './containers/blogMain/MainLogo'
 import BlogMain from './containers/blogMain/BlogMain';
-import BlogActiveMain from './containers/blogAcitve/BlogActiveMain'
+import BlogActiveMain from './containers/blogAcitve/BlogActiveMain';
+import BookListMain from './containers/bookList/BookListMain';
+import AboutMe from './containers/aboutMe/AboutMe'
 
 const routers = [
   {
@@ -23,33 +25,29 @@ const routers = [
     exact: true,
     main: () => <div> <BlogMain /></div>
   },{
-    path: '/BlogActiveMain',
+    path: '/blogActive',
     main: () => <div><BlogActiveMain /></div>
-  }
+  },
+  {
+    path: '/bookList',
+    main: () => <div><BookListMain /></div>
+  },{
+    path: '/aboutMe',
+    main: () => <div><AboutMe /></div>
+  },
 ]
 
 const App = () => (
   <Router>
+  
   <div>
+  <Link to="/topics">Topics</Link>
   <MainLogo/>
   <div className="blog-major">
     <div>
       {
         routers.map((route,index) => (
-          <Route 
-          key={index}
-          path={route.path}
-          exact={route.exact}
-          />
-
           
-        ))
-      }
-    </div>
-    <div>
-      {
-        routers.map((route,index) => (
-          console.log(route),
           <Route
           key={index}
           path={route.path}
@@ -63,14 +61,31 @@ const App = () => (
     </div>
     </div>
   </Router>
-)
-// export default class App extends Component {
-//   render() {
-//     return(
-//       <div>
-//         <BlogMain/>
-//       </div>
-//     )
-//   }
-// }
+);
+// ,
+          // <Route path="/topics" component={Topics} />
+const Topics = ({ match }) => (
+  <div>
+    <h2>Topics</h2>
+    <ul>
+      <li>
+        <Link to={`${match.url}/rendering`}>Rendering with React</Link>
+      </li>
+      <li>
+        <Link to={`${match.url}/components`}>Components</Link>
+      </li>
+      <li>
+        <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
+      </li>
+    </ul>
+
+    <Route path={`${match.url}/:topicId`} component={Topic} />
+    <Route
+      exact
+      path={match.url}
+      render={() => <h3>Please select a topic.</h3>}
+    />
+  </div>
+);
+
 export default App
