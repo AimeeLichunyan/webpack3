@@ -24,6 +24,7 @@ export default class MainLogo extends Component {
             <li className="blog-go"><Link to={'/blogActive'}>所有文章</Link></li>
             <li className="blog-go"><Link to={'/bookList'}>书单</Link></li>
             <li className="blog-go"><Link to={'/aboutMe'}>关于我</Link></li>
+            
           </ul>
         </div>
 
