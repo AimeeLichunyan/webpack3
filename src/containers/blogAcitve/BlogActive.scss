@@ -1,0 +1,13 @@
+.blog-activeAll {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255,255,255,0.2);
+    font-size: 25px;
+    
+    .activeWrap {
+        display: inline-block;       
+    }
+    .active {
+        padding-left: 40px;
+    }
+}
