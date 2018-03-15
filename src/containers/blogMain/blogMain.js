@@ -10,15 +10,22 @@ import './main.scss';
 import Zmage from 'react-zmage';
 
 class BlogMain extends Component {
-  render() {
-    return(
-      <div className="blog-wrap">
+	constructor(props) {
+		super(props)
+	}
+	componentWillReceiveProps(nextProps) {
+		console.log(nextProps)
+    
+	}
+	render() {
+		return(
+			<div className="blog-wrap">
         
-        <BlogMajor />
+				<BlogMajor />
 
-      </div>
-    )
-  }
+			</div>
+		)
+	}
 }
 
 export default BlogMain

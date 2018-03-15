@@ -14,10 +14,21 @@ export default class BlogMajor extends Component {
   onChange = (pageNumber) => {
     console.log('Page: ', pageNumber);
   }
+  componentWillMount() {
+    alert(1)
+  }
+  componentWillReceiveProps(nextProps) {
+    const {history } = this.props;
+    console.log(props)
+    console.log(nextProps)
+    // alert(1)
+    
+	}
   render() {
     return(
       <div >
         <section>
+        
           <MajorList />
           <MajorList />
           <MajorList />

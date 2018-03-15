@@ -4,19 +4,16 @@
 *@time 2018-03-05
 **/
 import React, { Component } from 'react';
-// import MainLogo from './MainLogo';
-// import BlogMajor from './BlogMajor';
-// import './main.scss';
-import Zmage from 'react-zmage';
+
 
 class BookListMain extends Component {
-  render() {
-    return(
-      <div className="blog-wrap">
+	render() {
+		return(
+			<div className="blog-wrap">
        书单列表
-      </div>
-    )
-  }
+			</div>
+		)
+	}
 }
 
 export default BookListMain
