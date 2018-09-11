@@ -34,7 +34,7 @@ module.exports = function(env) {
                     )
                 }
             }),
-            new ExtracTextPlugin('bundle.css')
+            // new ExtracTextPlugin('bundle.css')
         ]
     })
 }();

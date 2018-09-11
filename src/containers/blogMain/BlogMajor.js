@@ -15,7 +15,7 @@ export default class BlogMajor extends Component {
     console.log('Page: ', pageNumber);
   }
   componentWillMount() {
-    alert(1)
+    // alert(1)
   }
   componentWillReceiveProps(nextProps) {
     const {history } = this.props;
