@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import MainLogo from './containers/blogMain/MainLogo'
 import BlogMain from './containers/blogMain/BlogMain';
 import BlogActiveMain from './containers/blogAcitve/BlogActiveMain';
-import BookListMain from './containers/bookList/BookListMain';
+// import BookListMain from './containers/bookList/BookListMain';
 import AboutMe from './containers/aboutMe/AboutMe'
 
 const routers = [
