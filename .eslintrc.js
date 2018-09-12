@@ -6,8 +6,8 @@ module.exports = {
     "extends": "eslint:recommended",
     "parserOptions": {
         "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true
+            "experimentalObjectRestSpread": false,
+            "jsx": false
         },
         "sourceType": "module"
     },
@@ -15,21 +15,6 @@ module.exports = {
         "react"
     ],
     "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "double"
-        ],
-        "semi": [
-            "error",
-            "never"
-        ]
+        
     }
 };

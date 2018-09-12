@@ -15,21 +15,20 @@ module.exports = {
 		contentBase: "./src",
 		port: 3033
 	},
-	devtool: "source-map",
+	// devtool: "source-map",
 	// 配置入口文件
 	entry: {
 
 		"a": path.resolve(__dirname, "src/a.js"),
 		"b": path.resolve(__dirname, "src/b.js"),
-		vendor: ["react", "react-dom","react-router-dom"]
 	},
 	// 配置打包输出
 	output: {
 		path: path.resolve(__dirname, "./dist"),  
-		// publicPath: '/', 
-		filename: "[name]-[hash].js",
-		// chunkFilename: './bundle.chunck.js'
+		filename: "[name]-[chunkhash].js",  
+		// chunkFilename:'[name].chunk.js'
 	},
+	
 	module: {
 		loaders: [
 			{
@@ -71,9 +70,14 @@ module.exports = {
 	},
 	plugins: [
 		new ExtracTextPlugin({
-			filename: "[name]-[chunkhash].css",
+			filename: "[name]-[contenthash].css",
 		}),
-		new webpack.HotModuleReplacementPlugin(),
+		// new webpack.optimize.CommonsChunkPlugin({
+		// 	   name: 'vendor',
+		// 	   minChunks: Infinity
+		// 	 }),
+		// new webpack.HashedModuleIdsPlugin(),
+		// new webpack.HotModuleReplacementPlugin(),
 		new OpenBrowserPlugin({url: "http://localhost:3033"})
 	]
 }

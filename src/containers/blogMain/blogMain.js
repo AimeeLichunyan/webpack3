@@ -4,10 +4,10 @@
 *@time 2017-09-09
 **/
 import React, { Component } from 'react';
-import MainLogo from './MainLogo';
+// import MainLogo from './MainLogo';
 import BlogMajor from './BlogMajor';
 import './main.scss';
-import Zmage from 'react-zmage';
+// import Zmage from 'react-zmage';
 
 class BlogMain extends Component {
 	constructor(props) {

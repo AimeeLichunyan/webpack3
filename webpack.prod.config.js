@@ -19,20 +19,21 @@ module.exports = function(env) {
                     NODE_ENV: JSON.stringify('production')
                 }
             }),
-            new webpack.optimize.UglifyJsPlugin({
-                compress: {
-                    warnings: false
-                }
-            }),
+            // new webpack.optimize.UglifyJsPlugin({
+            //     compress: {
+            //         warnings: false
+            //     }
+            // }),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'vendor',
-                minChunks: function(module, count) {
-                    return (
-                       module.resource && /\.js$/.test(module.resource) && module.resource.indexOf(
-                           path.join(__dirname,'./node_modules')
-                       ) === 0
-                    )
-                }
+                minChunks:Infinity,
+                // minChunks: function(module, count) {
+                //     return (
+                //        module.resource && /\.js$/.test(module.resource) && module.resource.indexOf(
+                //            path.join(__dirname,'./node_modules')
+                //        ) === 0
+                //     )
+                // }
             }),
             // new ExtracTextPlugin('bundle.css')
         ]
