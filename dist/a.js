@@ -21,8 +21,6 @@ var _react = __webpack_require__("./node_modules/_react@15.6.2@react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__("./src/containers/assets/resect.css");
-
 __webpack_require__("./node_modules/_antd@3.8.4@antd/dist/antd.css");
 
 var _reactRouterDom = __webpack_require__("./node_modules/_react-router-dom@4.3.1@react-router-dom/es/index.js");
@@ -42,12 +40,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // import BlogMain from './containers/blogMain/BlogMain';
 // import AboutMe from './containers/aboutMe/AboutMe'
 
-/**
-*博客的路由文件
-*@author AimeeLi
-*@time 2017-09-09
-**/
-
+// import './containers/assets/resect.css';
 var routers = [{
   path: '/',
   exact: true,
@@ -77,7 +70,11 @@ var routers = [{
       _react2.default.createElement(AboutMe, null)
     );
   }
-}];
+}]; /**
+    *博客的路由文件
+    *@author AimeeLi
+    *@time 2017-09-09
+    **/
 
 var App = function App() {
   return _react2.default.createElement(
@@ -191,13 +188,6 @@ _reactDom2.default.render(_react2.default.createElement(_AppA2.default, null), d
                                                                                                                  *@author AimeeLi
                                                                                                                  *@time 2017-09-09
                                                                                                                  **/
-
-/***/ }),
-
-/***/ "./src/containers/assets/resect.css":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 
