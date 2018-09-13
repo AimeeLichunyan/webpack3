@@ -25,7 +25,7 @@ module.exports = {
 	// 配置打包输出
 	output: {
 		path: path.resolve(__dirname, "./dist"),  
-		filename: "[name]-[chunkhash].js",  
+		filename: "[name].js",  
 		// chunkFilename:'[name].chunk.js'
 	},
 	
@@ -70,7 +70,7 @@ module.exports = {
 	},
 	plugins: [
 		new ExtracTextPlugin({
-			filename: "[name]-[contenthash].css",
+			filename: "[name].css",
 		}),
 		new webpack.NamedModulesPlugin(),
 		// new webpack.HashedModuleIdsPlugin(),

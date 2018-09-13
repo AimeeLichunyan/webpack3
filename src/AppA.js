@@ -5,7 +5,7 @@
 **/
 
 import React, { Component } from 'react';
-// import './containers/assets/resect.css';
+import './containers/assets/resect.css';
 import 'antd/dist/antd.css'; 
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import MainLogo from './containers/blogMain/MainLogo'
