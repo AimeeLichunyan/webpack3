@@ -72,12 +72,8 @@ module.exports = {
 		new ExtracTextPlugin({
 			filename: "[name]-[contenthash].css",
 		}),
-		// new webpack.optimize.CommonsChunkPlugin({
-		// 	   name: 'vendor',
-		// 	   minChunks: Infinity
-		// 	 }),
+		// new webpack.NamedModulesPlugin(),
 		// new webpack.HashedModuleIdsPlugin(),
-		// new webpack.HotModuleReplacementPlugin(),
 		new OpenBrowserPlugin({url: "http://localhost:3033"})
 	]
 }

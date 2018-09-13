@@ -26,14 +26,14 @@ module.exports = function(env) {
             // }),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'vendor',
-                minChunks:Infinity,
-                // minChunks: function(module, count) {
-                //     return (
-                //        module.resource && /\.js$/.test(module.resource) && module.resource.indexOf(
-                //            path.join(__dirname,'./node_modules')
-                //        ) === 0
-                //     )
-                // }
+                // minChunks:Infinity,
+                minChunks: function(module, count) {
+                    return (
+                       module.resource && /\.js$/.test(module.resource) && module.resource.indexOf(
+                           path.join(__dirname,'./node_modules')
+                       ) === 0
+                    )
+                }
             }),
             // new ExtracTextPlugin('bundle.css')
         ]
