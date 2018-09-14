@@ -101,8 +101,7 @@
 /******/ ([
 /* 0 */,
 /* 1 */,
-/* 2 */,
-/* 3 */
+/* 2 */
 /***/ (function(module, exports) {
 
 
@@ -197,9 +196,9 @@ module.exports = function (css) {
 
 
 /***/ }),
+/* 3 */,
 /* 4 */,
-/* 5 */,
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
 /*
@@ -281,7 +280,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -327,7 +326,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(3);
+var	fixUrls = __webpack_require__(2);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {

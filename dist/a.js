@@ -11,18 +11,10 @@ webpackJsonp([1],[
 "use strict";
 
 
-__webpack_require__(2);
-
 __webpack_require__(0);
 
 // 公共文件
-var a = 1; // A项目的文件
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+var a = 1; // import './a.css'; // A项目的文件
 
 /***/ })
 ],[1]);
