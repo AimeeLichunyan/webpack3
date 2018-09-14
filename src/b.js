@@ -1,15 +1,3 @@
-/**
-*博客的主要入口文件
-*@author AimeeLi
-*@time 2017-09-09
-**/
-
-import React, { Component } from "react"
-import ReactDOM from "react-dom"
-import App from "./AppB"
-
-
-ReactDOM.render(
-	<App/>,
-	document.getElementById("root")
-)
+import './b.css'; // b项目单独的文件
+import './c.css'; // 公共文件
+var b = 2;
