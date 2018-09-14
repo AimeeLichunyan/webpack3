@@ -1,20 +1,23 @@
-webpackJsonp([1],[
-/* 0 */
-/***/ (function(module, exports) {
+webpackJsonp([1],{
 
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 1 */
+/***/ "./src/a.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(0);
+__webpack_require__("./src/c.css");
 
 // 公共文件
 var a = 1; // import './a.css'; // A项目的文件
 
+/***/ }),
+
+/***/ "./src/c.css":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
 /***/ })
-],[1]);
+
+},["./src/a.js"]);
