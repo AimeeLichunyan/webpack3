@@ -1,27 +1,28 @@
 webpackJsonp([1],{
 
-/***/ "./src/a.js":
+/***/ "aQZI":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__("./src/c.css");
+__webpack_require__("ocKd");
 
-__webpack_require__("./src/c.js");
+__webpack_require__("6LK4");
+
+__webpack_require__("z0gK");
 
 // 公共文件
-
-// import './a.css'; // A项目的文件
+// A项目的文件
 var a = 1;
 
 /***/ }),
 
-/***/ "./src/c.css":
+/***/ "ocKd":
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
 
-},["./src/a.js"]);
+},["aQZI"]);
