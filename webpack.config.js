@@ -73,7 +73,7 @@ module.exports = {
 			filename: "[name].css",
 		}),
 		// new webpack.NamedModulesPlugin(),
-		new webpack.HashedModuleIdsPlugin(),
+		// new webpack.HashedModuleIdsPlugin(),
 		new OpenBrowserPlugin({url: "http://localhost:3033"})
 	]
 }
