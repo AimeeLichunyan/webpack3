@@ -21,12 +21,12 @@ module.exports = {
 
 		"a": path.resolve(__dirname, "src/a.js"),
 		"b": path.resolve(__dirname, "src/b.js"),
+		vendor: ['./src/c.js']
 	},
 	// 配置打包输出
 	output: {
 		path: path.resolve(__dirname, "./dist"),  
 		filename: "[name].js",  
-		// chunkFilename:'[name].chunk.js'
 	},
 	
 	module: {
@@ -72,8 +72,8 @@ module.exports = {
 		new ExtracTextPlugin({
 			filename: "[name].css",
 		}),
-		// new webpack.NamedModulesPlugin(),
-		new webpack.HashedModuleIdsPlugin(),
+		new webpack.NamedModulesPlugin(),
+		// new webpack.HashedModuleIdsPlugin(),
 		new OpenBrowserPlugin({url: "http://localhost:3033"})
 	]
 }
